@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        color: white;
+        font-family: Arial, sans-serif;
+        background-image: url(../images/konserr.jpeg);
+        background-size: cover;
+      }
+
+      .login-container {
+        background-color: #eb8d1a;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .input-group {
+        margin-bottom: 20px;
+      }
+
+      .input-group input {
+        width: 300px;
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+
+      .login-button {
+        background-color: #82664b;
+        color: white;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .login-button:hover {
+        background-color: #c1c1c1;
+      }
+    </style>
+  </head>
+ 
+  <body>
+    <div class="login-container">
+        <img src="../images/serbaa.png" alt="Logo" width="200" height="100">
+      <div class="input-group">
+        <input type="text" placeholder="Email" />
+      </div>
+      <div class="input-group">
+        <input type="text" placeholder="Nama Lengkap" />
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Kata Sandi" />
+      </div>
+      <div class="input-group">
+        <input type="password" placeholder="Ulangi Kata Sandi" />
+      </div>
+      <button class="login-button">Daftar</button>
+      <br>
+      <label>Sudah punya akun
+      <a href="login.html">Masuk</a>
+      </label>
+    </div>
+  </body>
+</html>
