@@ -36,3 +36,11 @@ html, body {
   display: flex;
   align-items: center;
 }
+
+.car2{
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
