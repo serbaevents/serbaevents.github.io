@@ -17,9 +17,9 @@ export function responseData(results){
 
 export function isiRow(value) {
     let content = tableTemplate
-        .replace("#TYPE#", value.nokursi)
-        .replace("#NAME#", value.jemputan)
-        .replace("#KORDINAT#", value.jamgo);
+        .replace("#TYPE#", value.geometry.nokursi)
+        .replace("#NAME#", value.geometryjemputan)
+        .replace("#KORDINAT#", value.geometry.jamgo);
     console.log(content);
     addChild("databis", tableTag, tableRowClass, content);
 }
