@@ -73,49 +73,54 @@
           <!-- Header -->
           <div class="card-header d-flex justify-content-between align-items-center">
             <div>
-              <h2 class="text-xl font-semibold text-gray-800">Daftar Tiket</h2>
-            </div>
-            <div>
-              <a href="tambahtiket.html" class="btn btn-primary" data-toggle="modal">
-                Tambah Tiket
-              </a>            
-            </div>
+              <h2 class="text-xl font-semibold text-gray-800">Tambah Tiket</h2>
+            </div> 
           </div>
           <!-- End Header -->
     
           <!-- Table -->
-          <table class="table table-bordered" id="tableDaftarObat">
-            <thead class="bg-gray-50">
-              <tr>
-                <th scope="col">Tujuan Event</th>
-                <th scope="col">Titik Keberangkatan</th>
-                <th scope="col">Harga</th>
-                <th scope="col">Keterangan</th>
-                <th scope="col">Detail</th>
-              </tr>
-            </thead>
-            <tbody id="tableEvent">
-              <!-- Skeleton Loader -->
-              <tr id="skeletonLoader" class="animate__animated animate__pulse">
-                <!-- Skeleton Loader content -->
-              </tr>
-              <!-- End Skeleton Loader -->
-            <!-- </tbody> -->
-          </table>
+          <div class="card-body p-5 overflow-y-auto">
+            <!-- Grid -->
+            <div class="row g-2">
+                <div class="mb-3 row">
+                    <label for="nama_obat" class="col-sm-3 col-form-label">Tujuan Even</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="nama_obat">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="nama_obat" class="col-sm-3 col-form-label">Titik Keberangkatan</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="nama_obat">
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="nama_obat" class="col-sm-3 col-form-label">Harga</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="nama_obat">
+                    </div>
+                </div>  
+                <div class="mb-3 row">
+                    <label for="nama_obat" class="col-sm-3 col-form-label">Keterangan</label>
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" id="nama_obat">
+                    </div>
+                </div>
+            </div>
+            </div>
           <!-- End Table -->
     
           <!-- Footer -->
-          <div class="card-footer d-flex justify-content-between align-items-center">
-            <div id="TiketCount">
-              <p class="text-sm text-gray-600">
-                <span class="font-semibold text-gray-800">0</span> results
-              </p>
+          <div class="card-footer d-flex justify-content-end p-4 text-blue-gray-500">
+            <div>
+                <a href="datatiket.html" class="btn btn-primary" data-toggle="modal" style="margin-right: 10px;">
+                    Cancel
+                </a>            
             </div>
-            <div class="btn-group">
-              <button type="button" class="btn btn-outline-secondary">Prev</button>
-              <button type="button" class="btn btn-outline-secondary">Next</button>
-            </div>
-          </div>
+            <button type="button" class="btn btn-primary" onclick="postTambahObat()" data-ripple-light="true" data-dialog-close="true">
+                Save
+            </button>
+        </div>
           <!-- End Footer -->
         </div>
         <!-- End Card -->
@@ -124,8 +129,6 @@
     </div>
     <!-- End Content Section -->
   </div>
-
-  
   
   <!-- Bootstrap JS and Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -136,16 +139,16 @@
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <!-- <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script> -->
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
   
     <!-- Template Main JS File -->
-    <script src="./assets/js/main.js"></script>
-    <script type="module" src="./assets/js/getTiketfunc.js"></script>
-    <script type="module" src="./assets/js/getTiket.js"></script>
-    <!-- <script type="module" src="/admin/assets/js/deleteObat.js"></script>
-    <script type="module" src="/admin/assets/js/editObat.js"></script>
-    <script type="module" src="/admin/assets/js/fetchEditObat.js"></script>
-    <script type="module" src="/admin/assets/js/urlEditObat.js"></script> -->
+    <script src="../admin/assets/js/main.js"></script>
+    <script type="module" src="../admin/assets/js/pengguna/getPengguna.js"></script>
+    <script type="module" src="../admin/assets/js/pengguna/getPenggunaFunction.js"></script>
+    <script type="module" src="../admin/assets/js/deleteObat.js"></script>
+    <script type="module" src="../admin/assets/js/editObat.js"></script>
+    <script type="module" src="../admin/assets/js/fetchEditObat.js"></script>
+    <script type="module" src="../admin/assets/js/urlEditObat.js"></script>
   </body>
 </html>
