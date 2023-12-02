@@ -9,7 +9,7 @@ export const tableEvent = `
   <div class="flex items-center">
     <span
       class="text-sm font-semibold text-gray-800 dark:text-gray-200"
-      >#NAMAOBAT#</span
+      >#NAMAEVENT#</span
     >
   </div>
 </td>
@@ -17,7 +17,7 @@ export const tableEvent = `
 <div class="flex items-center">
   <span
     class="text-sm font-semibold text-gray-800 dark:text-gray-200"
-    >#JENISOBAT#</span
+    >#JENISEVENT#</span
   >
 </div>
 </td>
@@ -25,7 +25,7 @@ export const tableEvent = `
 <div class="flex items-center">
   <span
     class="text-sm font-semibold text-gray-800 dark:text-gray-200"
-    >#KETERANGAN#</span
+    >#HARGA#</span
   >
 </div>
 </td>
@@ -33,7 +33,7 @@ export const tableEvent = `
   <div class="flex items-center">
     <span
       class="text-sm font-semibold text-gray-800 dark:text-gray-200"
-      >#HARGA#</span
+      >#KETERANGAN#</span
     >
   </div>
 </td>
@@ -61,10 +61,10 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const content = tableEvent
-    .replace("#NAMAOBAT#", value.tujuanfxeven)
-    .replace("#JENISOBAT#", value.jemputan)
-    .replace("#KETERANGAN#", value.keterangan)
+    .replace("#NAMAEVENT#", value.tujuanfxeven)
+    .replace("#JENISEVENT#", value.jemputan)
     .replace("#HARGA#", value.harga)
+    .replace("#KETERANGAN#", value.keterangan)
     .replace("#IDEDIT#", value._id)
     .replace("#IDHAPUS#", value._id);
   addInner("tableEvent", content);
