@@ -2,8 +2,8 @@ import { URLGetEvent, responseData } from "../js/getTiket.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { hide } from "https://jscroot.github.io/element/croot.js";
 
-const CountObat = (count) => {
-  const resultCountElement = document.getElementById("obatCount");
+const CountTiket = (count) => {
+  const resultCountElement = document.getElementById("TiketCount");
   resultCountElement.innerHTML = `
     <p class="text-sm text-gray-600">
       <span class="font-semibold text-gray-800">${count}</span> results
@@ -29,7 +29,7 @@ const get = (target_url, responseFunction) => {
 
       // Hitung jumlah data dan perbarui tampilan
       const count = jsonData.length;
-      CountObat(count);
+      CountTiket(count);
     })
     .catch((error) => {
       console.log("error", error);

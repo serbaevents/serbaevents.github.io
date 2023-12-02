@@ -61,7 +61,7 @@ export function responseData(results) {
 
 export function isiRow(value) {
   const content = tableEvent
-    .replace("#NAMAEVENT#", value.tujuanfxeven)
+    .replace("#NAMAEVENT#", value.tujuaneven)
     .replace("#JENISEVENT#", value.jemputan)
     .replace("#HARGA#", value.harga)
     .replace("#KETERANGAN#", value.keterangan)
