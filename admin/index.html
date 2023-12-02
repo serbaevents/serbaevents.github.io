@@ -36,66 +36,74 @@
   </head>
 <body>
 
-<!-- navbar -->
-<header id="header" class="header d-flex align-items-center">
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top d-flex align-items-center">
+  <div class="container d-flex justify-content-between">
 
-  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-    <!-- Uncomment the line below if you also wish to use an image logo -->
-    <a id="logo" class="navbar-brand" href="dashboard.html"><img src="assets/img/serbaa.png" alt="Logo Name: Geeks" width="130" height="70"></a>
-    <nav id="navbar" class="navbar">
-    </a>
-    <nav id="navbar" class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="datacust.html">Data Pembeli</a></li>
-            <li><a href="datadriver.html">Data Driver</a></li>
-            <li><a href="datatiket.html">Tiket</a></li>
-            <li><a href="dataorder.html">Orders</a></li>
-          </ul>
-        </nav><!-- .navbar -->
+    <div class="logo">
+      <h1><a href="index.html">Data Admin</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+    </div>
 
-    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a  href="index.html">Home</a></li>
+        <li><a href="datacust.html">Data Pembeli</a></li>
+        <li><a href="datatiket.html">Tiket</a></li>
+        <li><a href="dataorder.html">Orders</a></li>
+      </ul>
+    </nav><!-- .navbar -->
 
   </div>
-</header><!-- End Header -->
+</header><!-- End Header -->->
 
 <!-- end navbar -->
 
 <!-- Content -->
-  <div class="content">
-    <h1>Dashboard</h1>
-
-    <div class="row">
-      <div class="col-md-4 pb-3">
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title">Total Orders</h5>
-          </div>
-          <div class="card-body">
-            <h1 class="card-subtitle">25</h1>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 pb-3">
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title">Completed Orders</h5>
-          </div>
-          <div class="card-body">
-            <h1 class="card-subtitle">20</h1>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 pb-3">
-        <div class="card">
-          <div class="card-header">
-            <h5 class="card-title">Pending Orders</h5>
-          </div>
-          <div class="card-body">
-            <h1 class="card-subtitle">5</h1>
-          </div>
-        </div>
+  <div class="ticket">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-blue order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Orders Received</h6>
+                        <h2 class="text-right"><i class="fa fa-cart-plus f-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-green order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Orders Received</h6>
+                        <h2 class="text-right"><i class="fa fa-rocket f-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-yellow order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Orders Received</h6>
+                        <h2 class="text-right"><i class="fa fa-refresh f-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 col-xl-3">
+                <div class="card bg-c-pink order-card">
+                    <div class="card-block">
+                        <h6 class="m-b-20">Orders Received</h6>
+                        <h2 class="text-right"><i class="fa fa-credit-card f-left"></i><span>486</span></h2>
+                        <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                    </div>
+                </div>
+            </div>
       </div>
     </div>
 

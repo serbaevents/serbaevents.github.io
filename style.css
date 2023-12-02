@@ -11,7 +11,16 @@
     margin: 0rem;
     box-sizing: border-box;
 }
-
+.navbar{
+    background-color: #FFFFFF;
+    padding-bottom: 0rem;
+    height: 3.5rem;
+    padding: 0.5rem; 
+}
+#navbar-container{
+    padding-left: 0.5rem;
+    padding-right: 0;
+}
 #logo {
     padding-top: 0.2rem;
     padding-bottom: 0.25rem;
@@ -20,7 +29,42 @@
     width: 112;
     height: 29;
 }
+.navbar-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#nav-form{
+    position: relative;
+    height: 2.5rem;
+    width: 15.5rem;
+    box-shadow: none;
+    margin: 0rem;
+    margin-left: 1.200rem;
+    
+}
 
+#nav-form input{
+    border: 1px solid #cbd5e1;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    padding-top: 0.35rem;
+    padding-left: 2.455rem!important;
+    margin-right: 0rem !important;
+}
+#nav-form input::placeholder{
+    font-family: 'Inter', sans-serif;
+    opacity: 0.7;
+    font-size: 0.875rem;
+}
+#nav-form-si{
+    box-sizing: border-box;
+    position: absolute;
+    left: 1.080rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.79rem;
+}
 /* Dropdown Button */
 .dropbtn {
     font-size: 0.875rem;
@@ -162,7 +206,29 @@
 
 /* Nav Right Side */
 
-
+#nav-right{
+    padding: 0rem;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    margin-bottom: 0rem;
+    width: fit-content;
+}
+.nav-right-item{
+    margin-left: 0.5rem;
+    list-style-type: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    overflow: visible;
+    background-color: #f1f5f9;
+    color: #94A3B8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 .bi-brightness-high-fill{
     font-size: 1.5rem;
     opacity: 1;
@@ -184,9 +250,14 @@
     top: 0.0625rem;
     right: 10%;
 }
+.nav-right-item img{
+    border-radius: 50%;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
 
-
-
+/* NAVBAR ENDS HERE */
 /* Banner */
 
 .banner{
@@ -725,7 +796,34 @@ footer{
         
     }
     /* Body Ends */
+    /* Navbar */
+    .navbar-toggler{
+        float: left;
+    }
+    #nav-right {
+        position: absolute;
+        right: 3.1875rem;
+        top: 0.5rem;
+    }
+    .navbar-toggler{
+        color: blue;
+        width: 2.25rem;
+        height: 1.875rem;
+        border: 0.0625rem solid blue;
+    }
+    .navbar-toggler-icon{
+        width: 100%;
+        object-fit: contain;
+    }
+    .nav-right-item{
+        margin-left: 0.0625rem;
+        margin-right: 0.1875rem;
+    }
+    .bi-brightness-high-fill{
+        margin-right: 0.4375rem;
+    }
 
+    /* Navbar Ends */
     /* Banner */
     .banner-container{
         max-width: 720px;
@@ -876,7 +974,66 @@ footer{
     }
 
     /* Body Ends */
+    /* Navbar */
+    
+    .navbar-collapse{
+        position: absolute;
+        top: 3.125rem;
+        width: 100vw;
+        left: 0;
+        transition-duration: 0.3s;
+        height: fit-content !important;
+        
+    }
+    .navbar-collapse ul{
+        display: flex;
+        justify-content: flex-start;
+        align-items: start;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        
 
+    }
+    .navbar-collapse ul li{
+        width: 100%;
+        text-align: left;
+        border-bottom: 0.0625rem solid black;
+        padding-top: 0.5rem;
+        padding-bottom: 0rem;
+
+    }
+    .navbar-collapse ul li button{
+        width: 100%;
+    }
+    #nav-form{
+        width: 95%;
+        margin: 0rem;
+        margin-top: 0.625rem;
+    }
+    #nav-right {
+        position: absolute;
+        right: 3.1875rem;
+        top: 0.5rem;
+    }
+    .navbar-toggler{
+        color: blue;
+        width: 2.25rem;
+        height: 1.875rem;
+        border: 0.0625rem solid blue;
+    }
+    .navbar-toggler-icon{
+        width: 100%;
+        object-fit: cover;
+    }
+    .nav-right-item{
+        margin-left: 0.0625rem;
+        margin-right: 0.1875rem;
+    }
+    .bi-brightness-high-fill{
+        margin-right: 0.4375rem;
+    }
+
+    /* Navbar ends */
     /* Banner */
 
     .banner {

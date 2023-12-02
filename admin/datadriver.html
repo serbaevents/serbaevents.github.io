@@ -35,113 +35,112 @@
     * License: https://bootstrapmade.com/license/
     ======================================================== -->
   </head>
-<div>
+  <div>
 
-  <header id="header" class="header d-flex align-items-center">
+    <header id="header" class="header d-flex align-items-center">
 
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <a id="logo" class="navbar-brand" href="dashboard.html"><img src="assets/img/serbaa.png" alt="Logo Name: Geeks" width="130" height="70"></a>
-      <nav id="navbar" class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="datacust.html">Data Pembeli</a></li>
-            <li><a href="datadriver.html">Data Driver</a></li>
-            <li><a href="datatiket.html">Tiket</a></li>
-            <li><a href="dataorder.html">Orders</a></li>
-          </ul>
-        </nav><!-- .navbar -->
-  
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-  
-    </div>
-  </header><!-- End Header -->
-
-<!-- end navbar -->
-
-
-  <!-- Content Section -->
-<div class="container-fluid bg-light">
-    <!-- Table Section -->
-    <div class="container px-4 py-5">
-      <!-- Card -->
-      <div class="card">
-        <!-- Header -->
-        <div class="card-header d-flex justify-content-between align-items-center">
-          <div>
-            <h2 class="text-xl font-semibold text-gray-800">Daftar Tiket</h2>
-            <p class="text-sm text-gray-600">Berikut merupakan data Tiket yang tersedia.</p>
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+ 
+          <div class="logo">
+            <h1><a href="index.html">Data Admin</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
           </div>
-          <div>
-            <a href="tambahTiket.html" class="btn btn-primary" data-toggle="modal">
-              Tambah Tiket
-            </a>            
-          </div>
+
+          <nav id="navbar" class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="datacust.html">Data Pembeli</a></li>
+                <li><a href="datadriver.html">Data Driver</a></li>
+                <li><a href="datatiket.html">Tiket</a></li>
+                <li><a href="dataorder.html">Orders</a></li>
+              </ul>
+            </nav><!-- .navbar -->
+      
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      
         </div>
-        <!-- End Header -->
+      </header><!-- End Header -->
+  <!-- end navbar -->
   
-        <!-- Table -->
-        <table class="table table-bordered" id="tableDaftarTiket">
-          <thead class="bg-gray-50">
-            <tr>
-              <th scope="col">Titik Penjemputan</th>
-              <th scope="col">Jam Penjemputan</th>
-              <th scope="col">Harga</th>
-              <th scope="col">Event</th>
-              <th scope="col">Detail</th>
-            </tr>
-          </thead>
-          <tbody id="tableDaftarTiket">
-            <!-- Skeleton Loader -->
-            <tr id="skeletonLoader" class="animate__animated animate__pulse">
-              <!-- Skeleton Loader content -->
-            </tr>
-            <!-- End Skeleton Loader -->
-          <!-- </tbody> -->
-        </table>
-        <!-- End Table -->
   
-        <!-- Footer -->
-        <div class="card-footer d-flex justify-content-between align-items-center">
-          <div id="TiketCount">
-            <p class="text-sm text-gray-600">
-              <span class="font-semibold text-gray-800">0</span> results
-            </p>
+    <!-- Content Section -->
+  <div class="container-fluid bg-light">
+      <!-- Table Section -->
+      <div class="container px-4 py-5">
+        <!-- Card -->
+        <div class="card">
+          <!-- Header -->
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <div>
+              <h2 class="text-xl font-semibold text-gray-800">Daftar Pembeli</h2>
+            </div>
           </div>
-          <div class="btn-group">
-            <button type="button" class="btn btn-outline-secondary">Prev</button>
-            <button type="button" class="btn btn-outline-secondary">Next</button>
+          <!-- End Header -->
+    
+          <!-- Table -->
+          <table class="table table-bordered" id="tableDaftarObat">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col">Nama Lengkap</th>
+                <th scope="col">Tanggal Lahir</th>
+                <th scope="col">Jenis Kelamin</th>
+                <th scope="col">Nomor HP</th>
+                <th scope="col">Alamat</th>
+                <th scope="col">Detail</th>
+              </tr>
+            </thead>
+            <tbody id="tableDaftarPengguna">
+              <!-- Skeleton Loader -->
+              <tr id="skeletonLoader" class="animate__animated animate__pulse">
+                <!-- Skeleton Loader content -->
+              </tr>
+              <!-- End Skeleton Loader -->
+            <!-- </tbody> -->
+          </table>
+          <!-- End Table -->
+    
+          <!-- Footer -->
+          <div class="card-footer d-flex justify-content-between align-items-center">
+            <div id="penggunaCount">
+              <p class="text-sm text-gray-600">
+                <span class="font-semibold text-gray-800">0</span> results
+              </p>
+            </div>
+            <div class="btn-group">
+              <button type="button" class="btn btn-outline-secondary">Prev</button>
+              <button type="button" class="btn btn-outline-secondary">Next</button>
+            </div>
           </div>
+          <!-- End Footer -->
         </div>
-        <!-- End Footer -->
+        <!-- End Card -->
       </div>
-      <!-- End Card -->
+      <!-- End Table Section -->
     </div>
-    <!-- End Table Section -->
+    <!-- End Content Section -->
   </div>
-  <!-- End Content Section -->
-</div>
-
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="../admin/assets/js/main.js"></script>
-  <script type="module" src="../admin/assets/js/getTiketFunction.js"></script>
-  <script type="module" src="../admin/assets/js/getTiket.js"></script>
-  <script type="module" src="/admin/assets/js/deleteTiket.js"></script>
-  <script type="module" src="/admin/assets/js/editTiket.js"></script>
-  <script type="module" src="/admin/assets/js/fetchEditTiket.js"></script>
-  <script type="module" src="/admin/assets/js/urlEditTiket.js"></script>
-</body>
+  
+  <!-- Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+    <!-- Template Main JS File -->
+    <script src="../admin/assets/js/main.js"></script>
+    <script type="module" src="../admin/assets/js/pengguna/getPengguna.js"></script>
+    <script type="module" src="../admin/assets/js/pengguna/getPenggunaFunction.js"></script>
+    <script type="module" src="../admin/assets/js/deleteObat.js"></script>
+    <script type="module" src="../admin/assets/js/editObat.js"></script>
+    <script type="module" src="../admin/assets/js/fetchEditObat.js"></script>
+    <script type="module" src="../admin/assets/js/urlEditObat.js"></script>
+  </body>
 </html>
