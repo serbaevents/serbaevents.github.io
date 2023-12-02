@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
+    <title>SerbaEvents</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+  
+    <!-- Favicons -->
+    <link href="rainbow.svg" rel="icon">
     <style>
       body {
         display: flex;
@@ -13,7 +18,7 @@
         margin: 0;
         color: white;
         font-family: Arial, sans-serif;
-        background-image: url(../images/konserr.jpeg);
+        background-image: url(assets/images/konserr.jpeg);
         background-size: cover;
       }
 
@@ -24,20 +29,20 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
-        align-items: center;
+        /* align-items: center; */
       }
 
       .input-group {
-        margin-bottom: 20px;
+        margin-bottom: 3px;
       }
 
       .input-group input {
-        width: 300px;
+        width: 600px;
         padding: 10px;
-        font-size: 16px;
+        font-size: 14px;
         border: none;
         border-radius: 5px;
-        margin-top: 5px;
+        margin-top: 1px;
       }
 
       .login-button {
@@ -53,18 +58,37 @@
 
       .login-button:hover {
         background-color: #c1c1c1;
+      
+      }
+
+      .arah{
+        align-items: left;
       }
     </style>
   </head>
  
   <body>
     <div class="login-container">
-        <img src="../images/serbaa.png" alt="Logo" width="200" height="100">
+      <div class="arah">
+        <h1>Account</h1>
+      </div>
       <div class="input-group">
         <input type="text" placeholder="Email" />
       </div>
       <div class="input-group">
+        <input type="text" placeholder="Password" />
+      </div>
+      <div class="arah">
+        <h1>Profile</h1>
+      </div>
+      <div class="input-group">
         <input type="text" placeholder="Nama Lengkap" />
+      </div>
+      <div class="input-group">
+        <input type="date" placeholder="" />
+      </div>
+      <div class="input-group">
+        <input type="text" placeholder="Jenis Kelamin" />
       </div>
       <div class="input-group">
         <input type="password" placeholder="Kata Sandi" />
@@ -74,9 +98,11 @@
       </div>
       <button class="login-button">Daftar</button>
       <br>
-      <label>Sudah punya akun
-      <a href="index.html">Masuk</a>
-      </label>
+      <center>
+        <label>Sudah punya akun
+          <a href="index.html">Masuk</a>
+          </label>
+      </center>
     </div>
   </body>
 </html>
