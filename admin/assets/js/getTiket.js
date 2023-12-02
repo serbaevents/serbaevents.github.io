@@ -60,7 +60,7 @@ export function responseData(results) {
 
 
 export function isiRow(value) {
-  const content = tableObat
+  const content = tableEvent
     .replace("#NAMAOBAT#", value.tujuan_even)
     .replace("#JENISOBAT#", value.jemputan)
     .replace("#KETERANGAN#", value.keterangan)
