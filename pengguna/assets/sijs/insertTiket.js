@@ -35,5 +35,5 @@ const responseData = (result) => {
   }
 };
 
-window.postTambahEvent = postTambahTiket();
+window.postTambahTiket = postTambahTiket();
 
