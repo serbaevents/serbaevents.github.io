@@ -24,7 +24,6 @@ const SignUpPengguna = () => {
     keterangan: getValue("keterangan"),
     harga: getValue("harga"),
     tujuaneven: getValue("tujuaneven"),
-    alamat: getValue("alamat"),
   };
   console.log(datainjson);
   postSignUpPengguna(target_url, datainjson, responseData);
