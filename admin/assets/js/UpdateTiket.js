@@ -1,6 +1,6 @@
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-import { urlPUT, AmbilResponse } from "./urlPutObat.js";
+import { urlPUT, AmbilResponse } from "./urlPutTiket.js";
 
 console.log("hadeer");
 
@@ -24,16 +24,16 @@ const putData = (target_url, datajson, responseFunction) => {
 };
 
 const pushData = () => {
-  const nama_obat = getValue("nama_obat"); 
-  const jenis_obat = getValue("jenis_obat");
+  const tujuaneven = getValue("tujuaneven"); 
+  const jemputan = getValue("jemputan");
   const keterangan = getValue("keterangan");
   const harga = getValue("harga");
 
   // Create the updated data object
   const data = {
      
-      nama_obat: nama_obat,
-      jenis_obat: jenis_obat,
+      tujuaneven: tujuaneven,
+      jemputan: jemputan,
       keterangan: keterangan,
       harga: harga,
     

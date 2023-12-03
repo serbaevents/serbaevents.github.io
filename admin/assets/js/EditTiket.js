@@ -1,7 +1,7 @@
 export const isiData = (results) => {
     const inputMapping = [
-      { id: "tujuaneven", path: "tiket.nama_obat" },
-      { id: "jemputan", path: "tiket.jenis_obat" },
+      { id: "tujuaneven", path: "tiket.tujuaneven" },
+      { id: "jemputan", path: "tiket.jemputan" },
       { id: "keterangan", path: "tiket.keterangan" },
       { id: "harga", path: "tiket.harga" },
     ];

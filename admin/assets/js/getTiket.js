@@ -44,7 +44,7 @@ export const tableEvent = `
       Edit
  </a>
   
-    <button class="btn btn-outline-danger btn-sm" onclick="deleteObat('#IDHAPUS#')">Delete</button>
+    <button class="btn btn-outline-danger btn-sm" onclick="deleteTiket('#IDHAPUS#')">Delete</button>
   </td>
 </td>
 </tr>
