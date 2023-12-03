@@ -3,8 +3,7 @@ import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
 const postTambahTiket = () => {
-  const target_url =
-    "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/getdataevent";
+  const target_url = "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/testinsertb";
   const tokenvalue = getCookie("Authorization");
   const tokenkey = "Authorization";
   const datainjson = {
@@ -36,5 +35,3 @@ const responseData = (result) => {
 };
 
 window.postTambahTiket = postTambahTiket;
-
-
