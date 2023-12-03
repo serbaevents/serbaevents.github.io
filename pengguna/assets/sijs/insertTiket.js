@@ -2,16 +2,16 @@ import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-const postTambahTiket = () => {
+const postTambahObat = () => {
   const target_url =
     "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/getdataevent";
   const tokenvalue = getCookie("Authorization");
   const tokenkey = "Authorization";
   const datainjson = {
-    tujuaneven: getValue("tujuaneven"),
-    jemputan: getValue("jemputan"),
-    harga: getValue("harga"),
+    nama_obat: getValue("nama_obat"),
+    jenis_obat: getValue("jenis_obat"),
     keterangan: getValue("keterangan"),
+    harga: getValue("harga"),
   };
   postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
   console.log(datainjson);
@@ -35,5 +35,5 @@ const responseData = (result) => {
   }
 };
 
-window.postTambahTiket = postTambahTiket();
+window.postTambahObat = postTambahObat;
 
