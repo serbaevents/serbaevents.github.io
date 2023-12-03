@@ -38,7 +38,7 @@ export const tableEvent = `
 </td>
 <td class="px-6 py-3 whitespace-nowrap">
 <a
-      href="updatetiket?obatId=#IDEDIT#"
+      href="updatetiket?tiketId=#IDEDIT#"
       class="inline-flex items-center px-2 cursor-pointer text-sm text-green-600 decoration-2 hover:underline font-medium"
     >
       Edit

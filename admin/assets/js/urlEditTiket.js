@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
-const obatId = urlParams.get("obatId");
+const tiketId = urlParams.get("tiketId");
 
 export const urlFetch =
-  "https://asia-southeast2-peak-equator-402307.cloudfunctions.net/obat_healhero?id=" +
-  obatId;
+  "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/getdataevent?id=" +
+  tiketId;
 //isi dengan url gcf get tiket by id
