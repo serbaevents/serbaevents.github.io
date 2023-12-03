@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const tiketId = urlParams.get("tiketId");
 
-export const urlPUT = "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/testinsertb?id=" + tiketId;
+export const urlPUT = "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/getdataevent?id=" + tiketId;
 
 export const AmbilResponse = (result) => {
   if (result.status) {
