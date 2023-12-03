@@ -1528,3 +1528,16 @@ footer{
         padding-top: 0.20rem;
     }
 }
+
+.baru {
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .baru-header {
+    background-color: #ee9425;
+    color: #fff;
+    border-bottom: 0;
+    border-radius: 15px 15px 0 0;
+  }
+  
