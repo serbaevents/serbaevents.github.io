@@ -1,207 +1,293 @@
-(function ($) {
+/**
+* Template Name: Impact
+* Updated: Sep 18 2023 with Bootstrap v5.3.2
+* Template URL: https://bootstrapmade.com/impact-bootstrap-business-website-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+document.addEventListener('DOMContentLoaded', () => {
     "use strict";
-
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
-    
-    
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
+  
+    /**
+     * Preloader
+     */
+    const preloader = document.querySelector('#preloader');
+    if (preloader) {
+      window.addEventListener('load', () => {
+        preloader.remove();
+      });
+    }
+  
+    /**
+     * Sticky Header on Scroll
+     */
+    const selectHeader = document.querySelector('#header');
+    if (selectHeader) {
+      let headerOffset = selectHeader.offsetTop;
+      let nextElement = selectHeader.nextElementSibling;
+  
+      const headerFixed = () => {
+        if ((headerOffset - window.scrollY) <= 0) {
+          selectHeader.classList.add('sticked');
+          if (nextElement) nextElement.classList.add('sticked-header-offset');
         } else {
-            $('.back-to-top').fadeOut('slow');
+          selectHeader.classList.remove('sticked');
+          if (nextElement) nextElement.classList.remove('sticked-header-offset');
         }
+      }
+      window.addEventListener('load', headerFixed);
+      document.addEventListener('scroll', headerFixed);
+    }
+  
+    /**
+     * Navbar links active state on scroll
+     */
+    let navbarlinks = document.querySelectorAll('#navbar a');
+  
+    function navbarlinksActive() {
+      navbarlinks.forEach(navbarlink => {
+  
+        if (!navbarlink.hash) return;
+  
+        let section = document.querySelector(navbarlink.hash);
+        if (!section) return;
+  
+        let position = window.scrollY + 200;
+  
+        if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+          navbarlink.classList.add('active');
+        } else {
+          navbarlink.classList.remove('active');
+        }
+      })
+    }
+    window.addEventListener('load', navbarlinksActive);
+    document.addEventListener('scroll', navbarlinksActive);
+  
+    /**
+     * Mobile nav toggle
+     */
+    const mobileNavShow = document.querySelector('.mobile-nav-show');
+    const mobileNavHide = document.querySelector('.mobile-nav-hide');
+  
+    document.querySelectorAll('.mobile-nav-toggle').forEach(el => {
+      el.addEventListener('click', function(event) {
+        event.preventDefault();
+        mobileNavToogle();
+      })
     });
-    $('.back-to-top').click(function () {
-        $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
-        return false;
+  
+    function mobileNavToogle() {
+      document.querySelector('body').classList.toggle('mobile-nav-active');
+      mobileNavShow.classList.toggle('d-none');
+      mobileNavHide.classList.toggle('d-none');
+    }
+  
+    /**
+     * Hide mobile nav on same-page/hash links
+     */
+    document.querySelectorAll('#navbar a').forEach(navbarlink => {
+  
+      if (!navbarlink.hash) return;
+  
+      let section = document.querySelector(navbarlink.hash);
+      if (!section) return;
+  
+      navbarlink.addEventListener('click', () => {
+        if (document.querySelector('.mobile-nav-active')) {
+          mobileNavToogle();
+        }
+      });
+  
     });
-
-
-    // Sidebar Toggler
-    $('.sidebar-toggler').click(function () {
-        $('.sidebar, .content').toggleClass("open");
-        return false;
+  
+    /**
+     * Toggle mobile nav dropdowns
+     */
+    const navDropdowns = document.querySelectorAll('.navbar .dropdown > a');
+  
+    navDropdowns.forEach(el => {
+      el.addEventListener('click', function(event) {
+        if (document.querySelector('.mobile-nav-active')) {
+          event.preventDefault();
+          this.classList.toggle('active');
+          this.nextElementSibling.classList.toggle('dropdown-active');
+  
+          let dropDownIndicator = this.querySelector('.dropdown-indicator');
+          dropDownIndicator.classList.toggle('bi-chevron-up');
+          dropDownIndicator.classList.toggle('bi-chevron-down');
+        }
+      })
     });
-
-
-    // Progress Bar
-    $('.pg-bar').waypoint(function () {
-        $('.progress .progress-bar').each(function () {
-            $(this).css("width", $(this).attr("aria-valuenow") + '%');
+  
+    /**
+     * Initiate glightbox
+     */
+    const glightbox = GLightbox({
+      selector: '.glightbox'
+    });
+  
+    /**
+     * Scroll top button
+     */
+    const scrollTop = document.querySelector('.scroll-top');
+    if (scrollTop) {
+      const togglescrollTop = function() {
+        window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+      }
+      window.addEventListener('load', togglescrollTop);
+      document.addEventListener('scroll', togglescrollTop);
+      scrollTop.addEventListener('click', window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      }));
+    }
+  
+    /**
+     * Initiate Pure Counter
+     */
+    new PureCounter();
+  
+    /**
+     * Clients Slider
+     */
+    new Swiper('.clients-slider', {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 40
+        },
+        480: {
+          slidesPerView: 3,
+          spaceBetween: 60
+        },
+        640: {
+          slidesPerView: 4,
+          spaceBetween: 80
+        },
+        992: {
+          slidesPerView: 6,
+          spaceBetween: 120
+        }
+      }
+    });
+  
+    /**
+     * Init swiper slider with 1 slide at once in desktop view
+     */
+    new Swiper('.slides-1', {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      }
+    });
+  
+    /**
+     * Init swiper slider with 3 slides at once in desktop view
+     */
+    new Swiper('.slides-3', {
+      speed: 600,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
+      slidesPerView: 'auto',
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 40
+        },
+  
+        1200: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  
+    /**
+     * Porfolio isotope and filter
+     */
+    let portfolionIsotope = document.querySelector('.portfolio-isotope');
+  
+    if (portfolionIsotope) {
+  
+      let portfolioFilter = portfolionIsotope.getAttribute('data-portfolio-filter') ? portfolionIsotope.getAttribute('data-portfolio-filter') : '*';
+      let portfolioLayout = portfolionIsotope.getAttribute('data-portfolio-layout') ? portfolionIsotope.getAttribute('data-portfolio-layout') : 'masonry';
+      let portfolioSort = portfolionIsotope.getAttribute('data-portfolio-sort') ? portfolionIsotope.getAttribute('data-portfolio-sort') : 'original-order';
+  
+      window.addEventListener('load', () => {
+        let portfolioIsotope = new Isotope(document.querySelector('.portfolio-container'), {
+          itemSelector: '.portfolio-item',
+          layoutMode: portfolioLayout,
+          filter: portfolioFilter,
+          sortBy: portfolioSort
         });
-    }, {offset: '80%'});
-
-
-    // Calender
-    $('#calender').datetimepicker({
-        inline: true,
-        format: 'L'
+  
+        let menuFilters = document.querySelectorAll('.portfolio-isotope .portfolio-flters li');
+        menuFilters.forEach(function(el) {
+          el.addEventListener('click', function() {
+            document.querySelector('.portfolio-isotope .portfolio-flters .filter-active').classList.remove('filter-active');
+            this.classList.add('filter-active');
+            portfolioIsotope.arrange({
+              filter: this.getAttribute('data-filter')
+            });
+            if (typeof aos_init === 'function') {
+              aos_init();
+            }
+          }, false);
+        });
+  
+      });
+  
+    }
+  
+    /**
+     * Animation on scroll function and init
+     */
+    function aos_init() {
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
+    }
+    window.addEventListener('load', () => {
+      aos_init();
     });
-
-
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1000,
-        items: 1,
-        dots: true,
-        loop: true,
-        nav : false
-    });
-
-
-    // Worldwide Sales Chart
-    var ctx1 = $("#worldwide-sales").get(0).getContext("2d");
-    var myChart1 = new Chart(ctx1, {
-        type: "bar",
-        data: {
-            labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
-            datasets: [{
-                    label: "USA",
-                    data: [15, 30, 55, 65, 60, 80, 95],
-                    backgroundColor: "rgba(0, 156, 255, .7)"
-                },
-                {
-                    label: "UK",
-                    data: [8, 35, 40, 60, 70, 55, 75],
-                    backgroundColor: "rgba(0, 156, 255, .5)"
-                },
-                {
-                    label: "AU",
-                    data: [12, 25, 45, 55, 65, 70, 60],
-                    backgroundColor: "rgba(0, 156, 255, .3)"
-                }
-            ]
-            },
-        options: {
-            responsive: true
-        }
-    });
-
-
-    // Salse & Revenue Chart
-    var ctx2 = $("#salse-revenue").get(0).getContext("2d");
-    var myChart2 = new Chart(ctx2, {
-        type: "line",
-        data: {
-            labels: ["2016", "2017", "2018", "2019", "2020", "2021", "2022"],
-            datasets: [{
-                    label: "Salse",
-                    data: [15, 30, 55, 45, 70, 65, 85],
-                    backgroundColor: "rgba(0, 156, 255, .5)",
-                    fill: true
-                },
-                {
-                    label: "Revenue",
-                    data: [99, 135, 170, 130, 190, 180, 270],
-                    backgroundColor: "rgba(0, 156, 255, .3)",
-                    fill: true
-                }
-            ]
-            },
-        options: {
-            responsive: true
-        }
-    });
-    
-
-
-    // Single Line Chart
-    var ctx3 = $("#line-chart").get(0).getContext("2d");
-    var myChart3 = new Chart(ctx3, {
-        type: "line",
-        data: {
-            labels: [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150],
-            datasets: [{
-                label: "Salse",
-                fill: false,
-                backgroundColor: "rgba(0, 156, 255, .3)",
-                data: [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15]
-            }]
-        },
-        options: {
-            responsive: true
-        }
-    });
-
-
-    // Single Bar Chart
-    var ctx4 = $("#bar-chart").get(0).getContext("2d");
-    var myChart4 = new Chart(ctx4, {
-        type: "bar",
-        data: {
-            labels: ["Italy", "France", "Spain", "USA", "Argentina"],
-            datasets: [{
-                backgroundColor: [
-                    "rgba(0, 156, 255, .7)",
-                    "rgba(0, 156, 255, .6)",
-                    "rgba(0, 156, 255, .5)",
-                    "rgba(0, 156, 255, .4)",
-                    "rgba(0, 156, 255, .3)"
-                ],
-                data: [55, 49, 44, 24, 15]
-            }]
-        },
-        options: {
-            responsive: true
-        }
-    });
-
-
-    // Pie Chart
-    var ctx5 = $("#pie-chart").get(0).getContext("2d");
-    var myChart5 = new Chart(ctx5, {
-        type: "pie",
-        data: {
-            labels: ["Italy", "France", "Spain", "USA", "Argentina"],
-            datasets: [{
-                backgroundColor: [
-                    "rgba(0, 156, 255, .7)",
-                    "rgba(0, 156, 255, .6)",
-                    "rgba(0, 156, 255, .5)",
-                    "rgba(0, 156, 255, .4)",
-                    "rgba(0, 156, 255, .3)"
-                ],
-                data: [55, 49, 44, 24, 15]
-            }]
-        },
-        options: {
-            responsive: true
-        }
-    });
-
-
-    // Doughnut Chart
-    var ctx6 = $("#doughnut-chart").get(0).getContext("2d");
-    var myChart6 = new Chart(ctx6, {
-        type: "doughnut",
-        data: {
-            labels: ["Italy", "France", "Spain", "USA", "Argentina"],
-            datasets: [{
-                backgroundColor: [
-                    "rgba(0, 156, 255, .7)",
-                    "rgba(0, 156, 255, .6)",
-                    "rgba(0, 156, 255, .5)",
-                    "rgba(0, 156, 255, .4)",
-                    "rgba(0, 156, 255, .3)"
-                ],
-                data: [55, 49, 44, 24, 15]
-            }]
-        },
-        options: {
-            responsive: true
-        }
-    });
-
-    
-})(jQuery);
-
+  
+  });

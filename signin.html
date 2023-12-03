@@ -73,7 +73,7 @@
         <input type="password" placeholder="Password" id="password" />
       </div>
       <button type="submit" class="login-button" id="button"
-      onclick="PostSignUp()">Sign In</button>
+      onclick="PostSignIn()">Sign In</button>
       <br>
       <label>
       Tidak Punya Akun?
@@ -83,21 +83,8 @@
     <a href="signup.html">Daftar</a> -->
     </div>
 
-    <script type="module" src="./sijs/post.js"></script>
-    <script type="module">
-      // Nama cookie yang akan diperiksa
-  
-  
-      import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-      const cookieName = "token";
-  
-      // Periksa apakah cookie ada dengan menggunakan fungsi dari file cookieUtil.js
-      if (getCookie(cookieName)) {
-        // Jika cookie tidak ada, arahkan kembali ke halaman signin
-        window.location.href = "./dashboard.html";
-      }
-    </script>
+    <script type="module" src="./assets/sijs/login.js"></script>
 
-    <script src="sijs/main.js"></script>
+    <script src="./assets/sijs/main.js"></script>
   </body>
 </html>
