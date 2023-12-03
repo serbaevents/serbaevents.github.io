@@ -1,50 +1,39 @@
+import { postWithToken } from "https://jscroot.github.io/api/croot.js";
 import { getValue } from "https://jscroot.github.io/element/croot.js";
+import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 
-function postSignUpPengguna(target_url, datajson, responseFunction) {
-  var raw = JSON.stringify(datajson);
-
-  var requestOptions = {
-    method: "POST",
-    body: raw,
-    redirect: "follow",
-  };
-
-  fetch(target_url, requestOptions)
-    .then((response) => response.text())
-    .then((result) => responseFunction(JSON.parse(result)))
-    .catch((error) => console.log("error", error));
-}
-
-const SignUpPengguna = () => {
-    const target_url =
-    "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/testinsertb";
-
+const postTambahTiket = () => {
+  const target_url =
+    "https://asia-southeast2-proven-wavelet-401905.cloudfunctions.net/getdataevent";
+  const tokenvalue = getCookie("Authorization");
+  const tokenkey = "Authorization";
   const datainjson = {
-    jemputan: getValue("jemputan"),
-    keterangan: getValue("keterangan"),
-    harga: getValue("harga"),
     tujuaneven: getValue("tujuaneven"),
+    jemputan: getValue("jemputan"),
+    harga: getValue("harga"),
+    keterangan: getValue("keterangan"),
   };
+  postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
   console.log(datainjson);
-  postSignUpPengguna(target_url, datainjson, responseData);
 };
 
 const responseData = (result) => {
   if (result.status) {
     Swal.fire({
       icon: "success",
-      title: "Sign Up Successful",
+      title: "Insert Successful",
       text: result.message,
     }).then(() => {
-      window.location.href = "../signin.html";
+      window.location.reload();
     });
   } else {
     Swal.fire({
       icon: "error",
-      title: "Sign Up Failed",
+      title: "Insert Failed",
       text: result.message,
     });
   }
 };
 
-window.SignUpPengguna = SignUpPengguna;
+window.postTambahEvent = postTambahTiket();
+
