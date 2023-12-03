@@ -1,7 +1,7 @@
 import {
     URLGetProfilePengguna,
     responseDataProfile,
-  } from "./getProfilePengguna.js";
+  } from "./gerEventPengguna.js";
   import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
   import { show, hide } from "https://jscroot.github.io/element/croot.js";
   
