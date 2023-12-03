@@ -8,10 +8,10 @@ const postTambahObat = () => {
   const tokenvalue = getCookie("Authorization");
   const tokenkey = "Authorization";
   const datainjson = {
-    nama_obat: getValue("nama_obat"),
-    jenis_obat: getValue("jenis_obat"),
-    keterangan: getValue("keterangan"),
+    tujuaneven: getValue("tujuaneven"),
+    jemputan: getValue("jemputan"),
     harga: getValue("harga"),
+    keterangan: getValue("keterangan"),
   };
   postWithToken(target_url, tokenkey, tokenvalue, datainjson, responseData);
   console.log(datainjson);
