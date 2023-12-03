@@ -82,15 +82,18 @@
           <table class="table table-bordered" id="tableDaftarObat">
             <thead class="bg-gray-50">
               <tr>
-                <th scope="col">Nama Lengkap</th>
-                <th scope="col">Tanggal Lahir</th>
-                <th scope="col">Jenis Kelamin</th>
-                <th scope="col">Nomor HP</th>
-                <th scope="col">Alamat</th>
+                <th scope="col">Nama Pembeli</th>
+                <th scope="col">Alamat Pengiriman</th>
+                <th scope="col">No HP</th>
+                <th scope="col">Nama Obat</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Harga</th>
+                <th scope="col">TotalHarga</th>
+                <th scope="col">Status</th>
                 <th scope="col">Detail</th>
               </tr>
             </thead>
-            <tbody id="tableDaftarPengguna">
+            <tbody id="tableDaftarPesanan">
               <!-- Skeleton Loader -->
               <tr id="skeletonLoader" class="animate__animated animate__pulse">
                 <!-- Skeleton Loader content -->
@@ -133,13 +136,10 @@
     <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
   
-    <!-- Template Main JS File -->
-    <script src="../admin/assets/js/main.js"></script>
-    <script type="module" src="../admin/assets/js/pengguna/getPengguna.js"></script>
-    <script type="module" src="../admin/assets/js/pengguna/getPenggunaFunction.js"></script>
-    <script type="module" src="../admin/assets/js/deleteObat.js"></script>
-    <script type="module" src="../admin/assets/js/editObat.js"></script>
-    <script type="module" src="../admin/assets/js/fetchEditObat.js"></script>
-    <script type="module" src="../admin/assets/js/urlEditObat.js"></script>
+ <!-- Template Main JS File -->
+ <script src="../admin/assets/js/main.js"></script>
+ <script type="module" src="../admin/assets/js/pesanan/getPesanan.js"></script>
+ <script type="module" src="../admin/assets/js/pesanan/getPesananFunction.js"></script>
+ <script type="module" src="/admin/assets/js/pesanan/deletePesanan.js"></script>
   </body>
 </html>
