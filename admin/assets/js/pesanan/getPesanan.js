@@ -25,7 +25,7 @@ export const tablePesanan = `
   <div class="flex items-center">
     <span
       class="text-sm font-semibold text-gray-800 dark:text-gray-200"
-      >#NAMAOBAT#</span
+      >#NAMAEVEN#</span
     >
   </div>
 </td>
@@ -41,7 +41,7 @@ export const tablePesanan = `
   <div class="flex items-center">
     <span
       class="text-sm font-semibold text-gray-800 dark:text-gray-200"
-      >#NAMAOBAT#</span
+      >#NAMAEVENT#</span
     >
   </div>
 </td>
@@ -97,8 +97,8 @@ export function isiRow(value) {
     .replace("#NAMA#", value.nama)
     .replace("#ALAMAT#", value.alamat)
     .replace("#NOMORHP#", value.alamat)
-    .replace("#NAMAOBAT#", value.nomorhp)
-    .replace("#NAMAOBAT#", value.namaobat)
+    .replace("#NAMAEVEN#", value.nomorhp)
+    .replace("#NAMAEVEN#", value.even)
     .replace("#QUANTITY#", value.quantity)
     .replace("#HARGA#", value.harga)
     .replace("#TOTALHARGA#", value.totalharga)
