@@ -45,9 +45,7 @@ export const tablePengguna = `
     >
   </div>
 </td>
-<td class="px-6 py-3 whitespace-nowrap">
-    <button class="btn btn-outline-danger btn-sm" onclick="deletePengguna('#IDHAPUS#')">Delete</button>
-  </td>
+
 </td>
 </tr>
 `;
@@ -67,6 +65,6 @@ export function isiRow(value) {
     .replace("#JENISKELAMIN#", value.jeniskelamin)
     .replace("#NOMORHP#", value.nomorhp)
     .replace("#ALAMAT#", value.alamat)
-    .replace("#IDHAPUS#", value._id);
+    
   addInner("tableDaftarPengguna", content);
 }
