@@ -1,4 +1,4 @@
-import { URLGetEvent, responseData } from "./getTiket.js";
+import { URLGetEvent, responseData } from "../js/getTiket.js";
 import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
 import { hide } from "https://jscroot.github.io/element/croot.js";
 
