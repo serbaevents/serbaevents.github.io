@@ -2,850 +2,434 @@
 <html lang="en">
 
 <head>
-    <!-- Auto Refresher -->
-    <meta http-equiv="refresh" content="-1">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>SerbaEvents</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-  
-    <!-- Favicons -->
-    <link href="rainbow.svg" rel="icon">
-
-    <!-- Bootstrap and CSS Files -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
 
-    <!-- Link Swiper's CSS -->
-    <!-- <link rel="stylesheet" href="css/swiper-style.css"> -->
-    <!-- <link rel="stylesheet" href="css/swiper-bundle.min.css"> -->
-    <link rel="stylesheet" href="assets/css/csscard/swiper-style.css">
+  <title>SerbaEvents</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
+  <!-- Favicons -->
+  <link href="assets/img/rainbow.svg" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!--Font Style  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-    <script src="sijs/cookie.js"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Amatic+SC:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Yummy
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
 
-  <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-       <a id="logo" class="navbar-brand" href="index.html"><img src="./assets/images/serbaa.png" alt="Logo Name: Geeks" width="90" height="50"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          </button>
-        </div>
-       </div>
-      </nav>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
 
-    <!-- Navbar Ends -->
-    <!-- Banner Section -->
-    <!--carousel-->
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>serbaevents</h1>
+      </a>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#kendaraan">Kendaraan</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="signin.html">Login</a></li>
+          <a class="btn-book-a-table" href="signup.html">Register</a>
+        </ul>
+      </nav>
+      <!-- .navbar -->
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero d-flex align-items-center section-bg">
     <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+          aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active" data-bs-interval="10000">
-          <a href=""><img src="./assets/images/stu.jpg" class="d-block w-100" alt="navier">
+          <a href=""><img src="./assets/img/stu.jpg" class="d-block w-100" alt="navier">
         </div>
         <div class="carousel-item" data-bs-interval="2000">
-          <a href=""><img src="./assets/images/dua.jpg" class="d-block w-100" alt="demon"></a>
+          <a href=""><img src="./assets/img/dua.jpg" class="d-block w-100" alt="demon"></a>
         </div>
-        <div class="carousel-item" >
-          <a href=""><img src="./assets/images/tga.jpg" class="d-block w-100" alt="agustd"></a>
+        <div class="carousel-item">
+          <a href=""><img src="./assets/img/tga.jpg" class="d-block w-100" alt="agustd"></a>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
     </div>
-    <!-- Banner Section Ends -->
-  
-    <!-- Card Carousel-1 -->
+  </section><!-- End Hero Section -->
 
-    <section class="cards-carousel container-fluid">
-        <div class="container cards-container">
+  <main id="main">
 
-            <!-- Heading Section -->
-            <div class="cards-container-heading">
-                <h2 class="">Recommended to you</h2>
-            </div>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
 
-            <!-- Cards Section -->
-            <div class="position-relative cards-container-body">
-
-                <!-- Left Arrow -->
-                <div class="arrow-container-l arrow-container-l1">
-                    <i id="left-arrow" class="bi bi-chevron-left left-arrow"></i>
-                </div>
-
-                <!-- Cards -->
-                <div class="carousel cards-slider swiper mySwiper">
-                    <div class="cards swiper-wrapper">
-                        <!-- Card1 -->
-                       <a href="detail.html"> 
-                        <div class="card swiper-slide">
-                            <!-- Card Banner Image -->
-                            <a href="detail.html"> 
-                            <img class="card-img-top" src="./assets/images/carousel1/car1.jpg" alt="Card image cap">
-                            </a>
-                            <!-- card Body -->
-                            <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">Didangdutin Fest</h5>
-                                    </div>
-                                    <div class="cardR1"  >
-                                        <span class="cardR1-3">17 Desember 2023 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 249.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/card1prof.png"
-                                                alt=""> </div>
-                                        <span>Mic Project</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   
-                        
-                        <!-- Card2 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car2.png" alt="Card image cap">
-
-
-                           <!-- card Body -->
-                           <div class="card-body col">
-                            <div class="row cardBodyR">
-                                <div class="cardR0">
-                                    <h5 class="">RAN The Sweet Seventeen </h5>
-                                </div>
-                        
-                                <div class="cardR1">
-                                    <span class="cardR1-3">20 Desember 2023 </span>
-                                </div>
-                                <div class="cardR2">
-                                    <span class="cardR3-1">Rp. 575.000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/card2prof.png"
-                                                alt=""> </div>
-                                        <span>Antara Suara</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card3 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car3.jpg" alt="Card image cap">
-
-                              <!-- card Body -->
-                              <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">HYPE-B! NIGHT</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">24 Januari 2024 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 75.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/car3.jpg"
-                                                alt=""> </div>
-                                        <span>FRIDAY NORAEBANG!</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card4 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car4.jpg" alt="Card image cap">
-
-                             <!-- card Body -->
-                             <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">METAMORPHOSIS FEST</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">09 Desember 2023 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 160.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/card4prof.png"
-                                                alt=""> </div>
-                                        <span>PT METAMORPHOSIS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 5 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car5.png" alt="Card image cap">
-
-
-                            <!-- card Body -->
-                            <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">jOYLAND FEST</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">09 Desember 2023 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 160.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/car5prof.png"
-                                                alt=""> </div>
-                                        <span>Plainsong Live</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 6 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car6.png" alt="Card image cap">
-
-
-                              <!-- card Body -->
-                              <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">IVE THE 1ST WORLD TOUR</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">14 Januari 2024 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 1.045.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/car6prof.jpg"
-                                                alt=""> </div>
-                                        <span>Mecimapro</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <!-- Right Arrow -->
-                <div class="arrow-container-r arrow-container-r1">
-
-                    <i id="right-arrow" class="bi bi-chevron-right right-arrow"></i>
-                </div>
-            </div>
+        <div class="section-header">
+          <h2>Temukan Rental kendaraan untuk event favorite kamu disini!</h2>
         </div>
-    </section>
-    
-    <div class="car2" >
-        <img class="" src="./assets/images/car2.jpg" alt="Card image cap" width="1260" height="" >
-    </div>  
-    
 
-    <!-- card carousel-2 -->
-
-    <section class="cards-carousel container-fluid">
-        <div class="container cards-container">
-
-            <!-- Heading Section -->
-            <div class="cards-container-heading">
-                <h2 class="">Recommended to you</h2>
-            </div>
-
-            <!-- Cards Section -->
-            <div class="position-relative cards-container-body">
-
-                <!-- Left Arrow -->
-                <div class="arrow-container-l arrow-container-l1">
-                    <i id="left-arrow" class="bi bi-chevron-left left-arrow"></i>
-                </div>
-
-                <!-- Cards -->
-                <div class="carousel cards-slider swiper mySwiper">
-
-
-                    <div class="cards swiper-wrapper">
-                        <!-- Card1 -->
-                       <a href="detail.html"> 
-                        <div class="card swiper-slide">
-
-                            <!-- Card Banner Image -->
-                            <a href="detail.html"> 
-                            <img class="card-img-top" src="./assets/images/carousel1/car1.jpg" alt="Card image cap">
-                            </a>
-
-                            <!-- card Body -->
-                            <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">Didangdutin Fest</h5>
-                                    </div>
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">17 Desember 2023 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 249.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/card1prof.png"
-                                                alt=""> </div>
-                                        <span>Mic Project</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   
-                        
-                        <!-- Card2 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car2.png" alt="Card image cap">
-
-
-                           <!-- card Body -->
-                           <div class="card-body col">
-                            <div class="row cardBodyR">
-                                <div class="cardR0">
-                                    <h5 class="">RAN The Sweet Seventeen </h5>
-                                </div>
-                        
-                                <div class="cardR1">
-                                    <span class="cardR1-3">20 Desember 2023 </span>
-                                </div>
-                                <div class="cardR2">
-                                    <span class="cardR3-1">Rp. 575.000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/card2prof.png"
-                                                alt=""> </div>
-                                        <span>Antara Suara</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card3 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car3.jpg" alt="Card image cap">
-
-                              <!-- card Body -->
-                              <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">HYPE-B! NIGHT</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">24 Januari 2024 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 75.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/car3.jpg"
-                                                alt=""> </div>
-                                        <span>FRIDAY NORAEBANG!</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card4 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car4.jpg" alt="Card image cap">
-
-                             <!-- card Body -->
-                             <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">METAMORPHOSIS FEST</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">09 Desember 2023 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 160.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/card4prof.png"
-                                                alt=""> </div>
-                                        <span>PT METAMORPHOSIS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 5 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car5.png" alt="Card image cap">
-
-
-                            <!-- card Body -->
-                            <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">jOYLAND FEST</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">09 Desember 2023 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 160.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/car5prof.png"
-                                                alt=""> </div>
-                                        <span>Plainsong Live</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 6 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car6.png" alt="Card image cap">
-
-
-                              <!-- card Body -->
-                              <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">IVE THE 1ST WORLD TOUR</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">14 Januari 2024 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 1.045.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/car6prof.jpg"
-                                                alt=""> </div>
-                                        <span>Mecimapro</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <!-- Right Arrow -->
-                <div class="arrow-container-r arrow-container-r1">
-
-                    <i id="right-arrow" class="bi bi-chevron-right right-arrow"></i>
-                </div>
-            </div>
+        <div class="row gy-4">
+          <div class="" data-aos="fade-up">
+            <p>
+              Belakangan ini, trend perjalanan dengan road trip menjadi opsi pilihan yang nyaman dan mengasyikkan
+              untuk menghadiri event-event spesial. Bagi Anda yang merencanakan perjalanan ke destinasi acara dengan
+              roadtrip atau dalam rangka perjalanan bisnis ke berbagai kota, jangan ragu untuk memesan tiket kendaraan
+              Anda melalui <b><i>serbaevents</i></b>, tempat yang tepat untuk segala kebutuhan perjalanan Anda. Dalam
+              hal harga, Anda tidak perlu khawatir! Terdapat banyak penawaran menarik yang dapat Anda nikmati di
+              <b><i>serbaevents</i></b>. Jadi, dapatkan segera tiket kendaraan dengan harga terjangkau di
+              <b><i>serbaevents</i></b> dan buat
+              perjalanan Anda lebih mengasyikkan. Ayo, segera pesan tiket kendaraan untuk event Anda di
+              <b><i>serbaevents</i></b>!
+            </p>
+            <p>
+              <b>Batasan Usia: </b>Aplikasi kami hanya dapat diakses oleh mereka yang berusia 17 tahun ke atas. Kami
+              mendorong pengguna yang
+              berusia di bawah 17 tahun untuk meminta bantuan dan izin dari orang tua atau wali mereka sebelum
+              menggunakan layanan kami. Keamanan dan kenyamanan pengguna kami adalah prioritas utama.
+            </p>
+          </div>
         </div>
-    </section>
+      </div>
+    </section><!-- End About Section -->
 
-    <div class="car2" >
-        <img class="" src="./assets/images/car3.jpg" alt="Card image cap" width="1260" height="" >
+    <!-- ======= Events Section ======= -->
+    <section id="events" class="events">
+      <div class="container-fluid">
+
+        <div class="section-header">
+          <h2>Events</h2>
+        </div>
+
+        <div class="slides-3 swiper">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-image: url(assets/img/adam.png)">
+              <a href="tiket1.html">
+                <h3>The Addams Family Musical</h3>
+                <div class="price align-self-start">IDR 255.000</div>
+                <p class="description">
+                  Pesta komikal merangkul keanehan keluarga, cerita asli. Wednesday Addams, putri kegelapan, dewasa dan
+                  cinta pada pemuda dari keluarga tak dikenal. Gomez Addams menyimpan rahasia dari Morticia.
+            </div><!-- End Event item -->
+            </a>
+            <!-- End Event item -->
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-image: url(https://i.pinimg.com/564x/f7/7d/43/f77d438e2deee108e48e90c21953c52a.jpg)">
+              <a href="https://www.loket.com/event/kecak-fire-dance-show-vuuug">
+                <h3>MAGICAL KECAK DANCE</h3>
+                <div class="price align-self-start">IDR 120.000</div>
+                <p class="description">
+                  Saksikan Tari Api Kecak Ramayana dengan nyanyian pukau dan koreografi berapi. Lebih dari 75 penari
+                  menghadirkan episode epik Ramayana tanpa alat musik, hanya suara manusia. Pengalaman unik di Bali.
+            </div><!-- End Event item -->
+            </a>
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-image: url(assets/img/ive.png)">
+              <a href="https://www.tiket.com/to-do/ive-in-jakarta-2024-day-1">
+                <h3>IVE THE 1ST WORLD TOUR</h3>
+                <div class="price align-self-start">IDR 1.225.000</div>
+                <p class="description">
+                  Siap untuk Love Dive? Saksikan grup K-pop ikonik, IVE ke Jakarta untuk konser perdana mereka, "IVE THE
+                  1ST WORLD TOUR SHOW WHAT i HAVE IN JAKARTA"!
+                </p>
+            </div>
+            </a>
+
+
+            <div class="swiper-slide event-item d-flex flex-column justify-content-end"
+              style="background-image: url(https://i.pinimg.com/564x/06/23/e0/0623e0d5791b026de123259ef49c3363.jpg)">
+              <a href="https://www.tiket.com/to-do/marketeers-tech-for-business-2024">
+                <h3>MARKETEERS TECH FOR BUSINESS 2024</h3>
+                <div class="price align-self-start">IDR 500.000</div>
+                <p class="description">
+                  Marketeers Tech for Business 2024 akan membantu Anda membongkar mitos-mitos seputar digital marketing
+                  dan memecahkan persoalan transformasi digital.
+                </p>
+            </div><!-- End Event item -->
+            </a>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section><!-- End Events Section -->
+
+    <!-- ======= Menu Section ======= -->
+    <section id="kendaraan" class="menu">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Services</h2>
+        </div>
+
+
+
+        <div class="tab-content">
+
+          <div class="tab-pane fade active show" id="menu-starters">
+
+            <div class="row gy-5">
+
+              <div class="col-lg-4 menu-item">
+                <img src="assets/img/shuttle/2car.png" class="menu-img img-fluid" alt="">
+                <h4>Mobil Private</h4>
+                <a href="detail/detailM.html">
+                  <p class="price">
+                    Detail
+                  </p>
+                </a>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <img src="assets/img/shuttle/1bus.png" class="menu-img img-fluid" alt="">
+                <h4>Bus</h4>
+                <a href="detail/detailB.html">
+                  <p class="price">
+                    Detail
+                  </p>
+                </a>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <img src="assets/img/shuttle/5shuttle.png" class="menu-img img-fluid" alt="">
+                <h4>Shuttle</h4>
+                <a href="detail/detailS.html">
+                  <p class="price">
+                    Detail
+                  </p>
+                </a>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <img src="assets/img/shuttle/4plane.png" class="menu-img img-fluid" alt="">
+                <h4>Pesawat</h4>
+                <a href="detail.html">
+                  <p class="price">
+                    Detail
+                  </p>
+                </a>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <img src="assets/img/shuttle/3taxi.png" class="menu-img img-fluid" alt="">
+                <h4>Taxi</h4>
+                <a href="detail.html">
+                  <p class="price">
+                    Detail
+                  </p>
+                </a>
+              </div><!-- Menu Item -->
+
+              <div class="col-lg-4 menu-item">
+                <img src="assets/img/shuttle/6train.png" class="menu-img img-fluid" alt="">
+                <h4>Kereta</h4>
+                <a href="detail.html">
+                  <p class="price">
+                    Detail
+                  </p>
+                </a>
+              </div><!-- Menu Item -->
+
+            </div>
+          </div><!-- End Starter Menu Content -->
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Menu Section -->
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Need Help? <span>Contact Us</span></p>
+        </div>
+
+        <div class="mb-3">
+          <iframe style="border:0; width: 100%; height: 350px;"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+            frameborder="0" allowfullscreen></iframe>
+        </div><!-- End Google Maps -->
+
+        <div class="row gy-4">
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-map flex-shrink-0"></i>
+              <div>
+                <h3>Our Address</h3>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item d-flex align-items-center">
+              <i class="icon bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>contact@example.com</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-md-6">
+            <div class="info-item  d-flex align-items-center">
+              <i class="icon bi bi-share flex-shrink-0"></i>
+              <div>
+                <h3>Opening Hours</h3>
+                <div><strong>Mon-Sat:</strong> 11AM - 23PM;
+                  <strong>Sunday:</strong> Closed
+                </div>
+              </div>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+
+
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div>
+            <h4>Address</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022 - US<br>
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4>Reservations</h4>
+            <p>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4>Opening Hours</h4>
+            <p>
+              <strong>Mon-Sat: 11AM</strong> - 23PM<br>
+              Sunday: Closed
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- card carousel-3 -->
-
-    <section class="cards-carousel container-fluid">
-        <div class="container cards-container">
-
-            <!-- Heading Section -->
-            <div class="cards-container-heading">
-                <h2 class="">Recommended to you</h2>
-            </div>
-
-            <!-- Cards Section -->
-            <div class="position-relative cards-container-body">
-
-                <!-- Left Arrow -->
-                <div class="arrow-container-l arrow-container-l1">
-                    <i id="left-arrow" class="bi bi-chevron-left left-arrow"></i>
-                </div>
-
-                <!-- Cards -->
-                <div class="carousel cards-slider swiper mySwiper">
-
-
-                    <div class="cards swiper-wrapper">
-                        <!-- Card1 -->
-                       <a href="detail.html"> 
-                        <div class="card swiper-slide">
-
-                            <!-- Card Banner Image -->
-                            <a href="detail.html"> 
-                            <img class="card-img-top" src="./assets/images/carousel1/car1.jpg" alt="Card image cap">
-                            </a>
-
-                            <!-- card Body -->
-                            <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">Didangdutin Fest</h5>
-                                    </div>
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">17 Desember 2023 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 249.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/card1prof.png"
-                                                alt=""> </div>
-                                        <span>Mic Project</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                   
-                        
-                        <!-- Card2 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car2.png" alt="Card image cap">
-
-
-                           <!-- card Body -->
-                           <div class="card-body col">
-                            <div class="row cardBodyR">
-                                <div class="cardR0">
-                                    <h5 class="">RAN The Sweet Seventeen </h5>
-                                </div>
-                        
-                                <div class="cardR1">
-                                    <span class="cardR1-3">20 Desember 2023 </span>
-                                </div>
-                                <div class="cardR2">
-                                    <span class="cardR3-1">Rp. 575.000</span>
-                                </div>
-                            </div>
-                        </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/card2prof.png"
-                                                alt=""> </div>
-                                        <span>Antara Suara</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card3 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car3.jpg" alt="Card image cap">
-
-                              <!-- card Body -->
-                              <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">HYPE-B! NIGHT</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">24 Januari 2024 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 75.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/car3.jpg"
-                                                alt=""> </div>
-                                        <span>FRIDAY NORAEBANG!</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card4 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car4.jpg" alt="Card image cap">
-
-                             <!-- card Body -->
-                             <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">METAMORPHOSIS FEST</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">09 Desember 2023 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 160.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/card4prof.png"
-                                                alt=""> </div>
-                                        <span>PT METAMORPHOSIS</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 5 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car5.png" alt="Card image cap">
-
-
-                            <!-- card Body -->
-                            <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">jOYLAND FEST</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">09 Desember 2023 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 160.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/car5prof.png"
-                                                alt=""> </div>
-                                        <span>Plainsong Live</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 6 -->
-                        <div class="card swiper-slide">
-                            <img class="card-img-top" src="./assets/images/carousel1/car6.png" alt="Card image cap">
-
-
-                              <!-- card Body -->
-                              <div class="card-body col">
-                                <div class="row cardBodyR">
-                                    <div class="cardR0">
-                                        <h5 class="">IVE THE 1ST WORLD TOUR</h5>
-                                    </div>
-                            
-                                    <div class="cardR1">
-                                        <span class="cardR1-3">14 Januari 2024 </span>
-                                    </div>
-                                    <div class="cardR2">
-                                        <span class="cardR3-1">Rp. 1.045.000</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- card Footer -->
-                            <div class="card-body col card-footer">
-                                <div class="card-ftr-con">
-                                    <div class="card-ftr-pid-con">
-
-                                        <div class="card-ftr-profile"><img src="./assets/images/carousel1/car6prof.jpg"
-                                                alt=""> </div>
-                                        <span>Mecimapro</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-                <!-- Right Arrow -->
-                <div class="arrow-container-r arrow-container-r1">
-
-                    <i id="right-arrow" class="bi bi-chevron-right right-arrow"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <div id="footer-hr-container">
-        <hr id="footer-hr">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Yummy</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/yummy-bootstrap-restaurant-website-template/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
     </div>
-    <footer class="footer">
-        <div id="footer-container" class="row container">
-            <div class="col-md-6 col-sm-12 footer1">© 2023 Geeks. All Rights Reserved.</div>
-            <div class="col-md-6 col-sm-12 footer2">
-                <a href="">Privacy</a>
-                <a href="">Terms</a>
-                <a href="">Feedback</a>
-                <a href="">Support</a>
-            </div>
-        </div>
-    </footer>
 
-    <!--JS SIGNIN-->
-    <!-- <script type="module">
-        // Nama cookie yang akan diperiksa
-    
-    
-        import { getCookie } from "https://jscroot.github.io/cookie/croot.js";
-        const cookieName = "token";
-    
-        // Periksa apakah cookie ada dengan menggunakan fungsi dari file cookieUtil.js
-        if (!getCookie(cookieName)) {
-          // Jika cookie tidak ada, arahkan kembali ke halaman signin
-          window.location.href = "index.html";
-        }
-      </script>
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
 
-      <script>
-        function logout(){
-          let konfirmasi= confirm ('Apakah yakin akan logout?') 
-          if (konfirmasi) {
-            deleteCookie("token");
-          }
-          
-        }
-      </script>
-          <script src="sijs/main.js"></script> -->
-<!-- 
-    <div id="preloader"></div> -->
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
-     <!-- Template Main JS File -->
-     <script src="./assets/sijs/main.js"></script>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
-
-<!-- Bootstrap Script JavaScript Files -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-    crossorigin="anonymous"></script>
-<script src="assets/js/js.js"></script>
-
-<script src="assets/js/swiper-bundle.min.js"></script>
-<script src="assets/js/js.js"></script>
 
 </html>

@@ -23,13 +23,17 @@ const responseData = (result) => {
       title: "Insert Successful",
       text: result.message,
     }).then(() => {
-      window.location.reload();
+      // Redirect to the success URL
+      window.location.href = "datatiket.html";
     });
   } else {
     Swal.fire({
       icon: "error",
       title: "Insert Failed",
       text: result.message,
+    }).then(() => {
+      // Reload the page on failure
+      window.location.reload();
     });
   }
 };

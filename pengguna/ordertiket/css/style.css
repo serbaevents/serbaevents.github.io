@@ -1,0 +1,411 @@
+* {
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    color: #999;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('../images/konserr.jpeg');
+    background-position: center;
+    background-size: cover;
+}
+
+#main {
+    max-width: 51.625rem;
+    min-height: 38.75rem;
+    background-color: #FFFFFF;
+    padding-top: 3.938rem;
+}
+
+#icons-row {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-bottom: 2.0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+#icons-row>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#icons-row>div span {
+    margin-top: 0.78rem;
+    color: #666666;
+    font-size: 0.78rem;
+    letter-spacing: -0.022rem;
+    text-transform: uppercase;
+}
+
+.icons-img-con {
+    cursor: pointer;
+}
+
+.icons-img-con img {
+    width: 100%;
+}
+
+#form-row h3 {
+    color: #333333;
+    font-size: 1.25rem;
+    margin: 0rem;
+    margin-bottom: 1.813rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.125rem;
+    font-weight: 900;
+}
+
+form {
+    margin: auto;
+}
+
+.form>div>div {
+    position: relative;
+    margin-bottom: 1.25rem;
+}
+
+.form>div>div>div {
+    position: relative;
+}
+
+.basic-detail-inner-row {
+    padding-left: 0rem;
+    padding-right: 0rem;
+}
+
+#basic-detail-state {
+    position: relative;
+}
+
+#basic-detail-city {
+    position: relative;
+}
+
+#basic-detail-city i,
+#basic-detail-state i {
+    right: 2.0rem;
+}
+
+input+i {
+    font-size: 0.75rem;
+    color: #999;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.2rem;
+}
+
+input {
+    height: 2.625rem;
+    border: 0.063rem solid #e6e6e6;
+    width: 100%;
+    background: 0 0;
+    padding: 0rem 0rem 0rem 1.2rem;
+    color: #999;
+    font-size: 0.875rem;
+}
+
+input[data-error] {
+    color: #c92432;
+    border-color: #c92432;
+    background-color: #fffafa;
+}
+
+input::placeholder {
+    color: #999;
+    font-size: 0.875rem;
+}
+
+input:focus {
+    border: 0.125rem solid #e6e6e6;
+    outline: #e6e6e6;
+    color: #999;
+    background: 0 0;
+}
+
+.bi-eye-fill,
+.bi-lock {
+    cursor: pointer;
+}
+
+.form-footer-btn {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.65rem !important;
+}
+
+.form-footer-btn button {
+    border: none;
+    display: inline-flex;
+    height: 2.625rem;
+    width: 8.25rem;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    background: #f4c176;
+    text-transform: uppercase;
+    justify-content: center;
+    letter-spacing: 0.063rem;
+    font-size: 0.938rem;
+    border-radius: 0.188rem;
+
+}
+
+.form-footer-btn button:first-child {
+    width: 6.063rem;
+}
+
+#basic-detail-footer {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+#basic-detail-footer button:first-child {
+    cursor: not-allowed;
+    visibility: hidden;
+
+}
+
+#password-footer-con {
+    padding-top: 0.7rem;
+}
+
+/* Step3 My cart */
+#step3-heading {
+    margin-bottom: 1rem !important;
+}
+
+#step3-title p {
+    font-family: 'Lato-Bold', sans-serif;
+    font-size: 0.9rem;
+    margin-bottom: 0rem;
+    padding-bottom: 0.4rem;
+    padding-top: 0.563rem;
+}
+
+.step3-title p:last-child {
+    padding-left: 4.8rem;
+}
+
+#myCart {
+    padding-left: 0.938rem;
+}
+
+#mycard-p-r1 {
+    border-top: 0.063rem solid #e6e6e6;
+    padding-top: 0.813rem;
+    padding-bottom: 0.813rem;
+}
+
+#myCart div:last-child {
+    padding-bottom: 0.5rem;
+}
+
+#mycard-p-r1>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.myCart-img-con {
+    border: 0.063rem solid #e6e6e6;
+    width: 5.938rem !important;
+    height: 5rem;
+    overflow: hidden;
+    margin: auto;
+}
+
+#mycard-p-r1>div:nth-child(3) {
+    display: block;
+    padding-top: 0.625rem;
+}
+
+.mycart-product2-con {
+    box-sizing: border-box;
+}
+
+
+#quantity,
+#totalPrice,
+#mycart-product1,
+#mycart-product2 {
+    all: revert;
+    background-color: #F2F2F2;
+    border: none;
+    color: #999999;
+    padding: 0rem 0rem;
+    margin-left: 0rem;
+    cursor: pointer;
+    width: 2.859rem;
+    height: 2.25rem;
+}
+
+#quantity {
+    width: fit-content;
+    color: black;
+}
+
+#totalPrice {
+    background-color: #FFFFFF;
+    font-size: 0.938rem;
+    color: #f4c176;
+    font-family: 'Lato-Bold', sans-serif;
+    margin-left: 4.25rem;
+}
+
+.product-info {
+    margin-left: 0.2rem;
+    color: #b39999;
+}
+
+.product-name {
+    color: black;
+    margin-top: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+
+#mob-cart-heading>p {
+    color: black !important;
+}
+
+/* Step4 Cart Total */
+#cart-total-con {
+    font-size: 0.3rem;
+    color: #666;
+    margin: auto;
+    width: fit-content;
+}
+
+table {
+    color: #666;
+    font-size: 0.938rem;
+    margin: auto;
+}
+
+th {
+    color: black;
+    font-size: 0.9375rem;
+    width: 55.0%;
+}
+
+td {
+    padding-top: 11px;
+    padding-bottom: 11px;
+    /* text-align: left; */
+}
+
+#top-td {
+    letter-spacing: -0.03rem;
+}
+
+#shippingL,
+#pickupL {
+    padding-left: 0.400rem;
+}
+
+.bi-x-circle {
+    font-size: 0.70rem;
+}
+
+.step3-footer {
+    margin-bottom: 0rem;
+    margin-top: 0rem !important;
+}
+
+#service-text {
+    color: #666;
+    display: inline;
+    font-family: 'Lato-Bold', sans-serif;
+    letter-spacing: -0.05rem;
+}
+
+#r-btn1,
+#r-btn2 {
+    font-size: 0.063rem;
+    width: 0.875rem;
+    height: 0.875rem;
+}
+
+.checkout-btn-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#checkout-btn {
+    width: 14.625rem;
+}
+
+/* Form Changing Animation */
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0.75;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
+    }
+
+    50% {
+        opacity: 0.50;
+    }
+
+    75% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#step1,
+#step2,
+#step3,
+#step4 {
+    opacity: 0;
+    display: none;
+}
+
+#step1 {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    body {
+        background: none;
+        display: block;
+    }
+
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3</title>
+    <!-- CSS & Bootstraps CDN-->
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+  </head>
+
+  <body class="d-flex align-items-center justify-content-center">
+    <div id="main" class="container-md px-md-5 px-xs-2">
+      <!-- Icons Row -->
+      <div id="icons-row" class="row"></div>
+      <!-- Main Form Container -->
+      <div id="form-row" class="form-row row">
+        <div class="container">
+          <!-- Basic Details-->
+          <div id="step1">
+            <div class="row">
+              <div class="col-md-12">
+                <h3>Basic Details</h3>
+              </div>
+            </div>
+            <form id="step1-form" class="form col-md-11" onsubmit="event.preventDefault(); validateFormStep1(event);">
+              <div class="row mx-0 px-0">
+                <div class="col-md-6 basic-detail-inner-row">
+                  <div class="position-relative"><input id="fname" name="fname" type="text" onkeydown="emptyChecker(event);" placeholder="First Name" /><i class="bi bi-person-fill"></i></div>
+                </div>
+                <div class="col-md-6 basic-detail-inner-row">
+                  <div class="position-relative"><input id="lname" name="lname" type="text" onkeydown="emptyChecker(event);" placeholder="Last Name" /><i class="bi bi-person-fill"></i></div>
+                </div>
+              </div>
+              <div class="row mx-0 px-0">
+                <div class="col-md-6 basic-detail-inner-row">
+                  <div class="position-relative"><input id="email" name="email" type="email" onkeydown="emptyChecker(event);" placeholder="Email ID" /><i class="bi bi-envelope"></i></div>
+                </div>
+                <div class="col-md-6 basic-detail-inner-row">
+                  <div class="position-relative"><input id="userId" name="userId" type="text" onkeydown="emptyChecker(event);" placeholder="Your User ID" /><i class="bi bi-person-square"></i></div>
+                </div>
+              </div>
+              <div class="row mx-0 px-0">
+                <div class="col-md-6 basic-detail-inner-row">
+                  <div class="position-relative"><input id="country" name="country" type="text" onkeydown="emptyChecker(event);" placeholder="Country" /><i class="bi bi-map"></i></div>
+                </div>
+                <div class="col-md-6 basic-detail-inner-row">
+                  <div class="row">
+                    <div id="basic-detail-state" class="col-md-6">
+                      <input id="state" name="state" type="text" onkeydown="emptyChecker(event);" placeholder="State" />
+                      <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                    <div id="basic-detail-city" class="col-md-6 mt-md-0 mt-3">
+                      <input id="city" name="city" type="text" onkeydown="emptyChecker(event);" placeholder="City" />
+                      <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row mx-0 px-0">
+                <div class="col-md-6 basic-detail-inner-row">
+                  <div class="position-relative"><input id="phoneNum" name="phoneNum" type="tel" onkeydown="emptyChecker(event);" pattern="[0-9]{4}-[0-9]{7}" placeholder="0300-1122334" /><i class="bi bi-phone"></i></div>
+                </div>
+                <div class="col-md-6 basic-detail-inner-row">
+                  <div class="position-relative">
+                    <input id="refCoder" name="refCoder" type="password" onkeydown="emptyChecker(event);" placeholder="Reference Coder" /><i class="bi bi-eye-fill" onclick="showPassword(event, 'refCoder');"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer Buttons -->
+              <div id="basic-detail-footer" class="form-footer-btn mb-4 mb-md-0">
+                <button type="button" disabled onclick="nextPrevAnimation(-1)">BACK</button>
+
+                <button id="next1" type="submit" onclick="{}">CONTINUE</button>
+              </div>
+            </form>
+          </div>
+          <!-- Password Change -->
+          <div id="step2">
+            <div class="row">
+              <div class="col-12">
+                <h3>PASSWORD CHANGE</h3>
+              </div>
+            </div>
+            <form id="password-change" class="form col-md-11 px-2 px-md-3" onsubmit="event.preventDefault(); validateFormStep2(event);">
+              <div class="col-md-12 mx-0 px-0">
+                <div id="currentPass-con">
+                  <input id="currentPass" name="currentPass" type="password" placeholder="Current Password" onkeydown="emptyChecker(event);" />
+                  <i class="bi bi-lock" onclick="showPassword(event, 'currentPass')"></i>
+                </div>
+                <div id="conCurrentPass-con">
+                  <input
+                    id="conCurrentPass"
+                    name="conCurrentPass"
+                    type="password"
+                    placeholder="Enter the Current Password"
+                    onkeydown="emptyChecker(event); conPasswordValidate('currentPass', 'conCurrentPass');"
+                    onkeyup="conPasswordValidate('currentPass', 'conCurrentPass');"
+                  />
+                  <i class="bi bi-lock" onclick="showPassword(event, 'conCurrentPass')"></i>
+                </div>
+                <div id="newPass-con">
+                  <input id="newPass" name="newPass" type="password" placeholder=" New Password" onkeydown="emptyChecker(event);" />
+                  <i class="bi bi-lock" onclick="showPassword(event, 'newPass')"></i>
+                </div>
+                <div id="conNewPass-con">
+                  <input
+                    id="conNewPass"
+                    name="conNewPass"
+                    type="password"
+                    placeholder="Confirm New Password"
+                    onkeydown="emptyChecker(event); conPasswordValidate('newPass', 'conNewPass');"
+                    onkeyup="conPasswordValidate('newPass', 'conNewPass');"
+                  />
+                  <i class="bi bi-lock" onclick="showPassword(event, 'conNewPass')"></i>
+                </div>
+              </div>
+              <!-- Footer Buttons -->
+              <div id="password-footer-con" class="form-footer-btn">
+                <button type="button" onclick="nextPrevAnimation(-1)">BACK</button>
+
+                <button id="next1" type="submit" onclick="{}">CONTINUE</button>
+              </div>
+            </form>
+          </div>
+          <!-- My Cart -->
+          <div id="step3">
+            <div class="row">
+              <div class="col-12">
+                <h3 id="step3-heading">MY CART</h3>
+              </div>
+            </div>
+            <form class="form row" onsubmit="event.preventDefault(); nextPrevAnimation(1); validateFormStep3(event); calculateBill();">
+              <div class="container">
+                <div id="step3-title" class="step3-title row d-none d-md-flex mb-0">
+                  <p class="offset-2 col-3">Product Detail</p>
+                  <p class="col-2">Quantity</p>
+                  <p class="col-4">Total Price</p>
+                </div>
+                <div id="myCart">
+                  <!-- First Item -->
+                  <div id="mycard-p-r1" class="row">
+                    <div class="col-12 col-md-2">
+                      <div class="myCart-img-con">
+                        <img src="images/adam.png" alt="" />
+                      </div>
+                    </div>
+                    <div id="mob-cart-heading" class="col-6 d-block d-md-none mt-4">
+                      <p>Product Detail</p>
+                      <p class="mt-4">Quantity</p>
+                      <p class="mt-2">Total Price</p>
+                    </div>
+                    <div class="col-6 col-md-9">
+                      <div class="row">
+                        <div class="col-12 col-md-2 d-flex flex-column justify-content-end align-items-center justify-content-md-center">
+                          <h6 id="product-name-tiket" class="product-info product-name align-self-end align-self-md-start">The Addam's Family Musical</h6>
+                          <h6 class="product-info align-self-end align-self-md-start">IDR 255.000</h6>
+                        </div>
+                        <div id="quantity-controller-tiket" class="col-12 col-md-5 mycart-product2-con d-flex justify-content-end align-items-center justify-content-md-center">
+                          <input name="itemName" type="text" value="tiket" hidden />
+                          <input id="mycart-product1" class="mycart-product1" type="button" onclick="event.preventDefault(); quantityUpdate(1, 0, 255.000);" value="+" />
+                          <input id="quantity" class="quantity" name="quantity" type="button" value="1" text="tiket" />
+                          <input id="mycart-product2" class="mycart-product2" type="button" onclick="event.preventDefault(); quantityUpdate(-1, 0, 255.000);" value="-" />
+                        </div>
+                        <div class="col-12 col-md-2 d-flex justify-content-end align-items-center justify-content-md-center">
+                          <input id="totalPrice" class="totalPrice" name="totalPrice" type="button" value="IDR 255.000" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-1 cart-cross-icon d-flex justify-content-center justify-content-md-start">
+                      <i class="bi bi-x-circle"></i>
+                    </div>
+                  </div>
+                  <!-- Second Item -->
+                  <div id="mycard-p-r1" class="row"></div>
+                </div>
+              </div>
+              <!-- Footer Buttons -->
+              <div class="form-footer-btn step3-footer mb-4 mb-md-0">
+                <button type="button" onclick="nextPrevAnimation(-1)">BACK</button>
+
+                <button id="next1" type="submit" onclick="">CONTINUE</button>
+              </div>
+            </form>
+          </div>
+          <!-- Cart Total -->
+          <div id="step4">
+            <div class="row">
+              <div class="col-12">
+                <h3>CART TOTALS</h3>
+              </div>
+            </div>
+            <form class="form" onsubmit="event.preventDefault(); nextPrevAnimation(99, 1);">
+              <div id="cart-total-con">
+                <table class="col-12 col-sm-7 col-md-8 col-lg-8" cellspacing="0">
+                  <tr></tr>
+                  <tr>
+                    <th class="ship">Shipping:</th>
+                    <td id="top-td" class="row" colspan="">
+                      <div class="col-12">
+                        <input type="radio" checked name="ship" id="r-btn1" />
+                        <label id="shippingL" for="r-btn1">Free Shipping</label>
+                      </div>
+                      <div class="col-12">
+                        <input type="radio" name="ship" id="r-btn2" />
+                        <label id="pickupL" for="r-btn2">Local pickup: GRATIS</label>
+                      </div>
+                    </td>
+                  </tr>
+
+                  <tr></tr>
+                </table>
+              </div>
+
+              <!-- Footer Buttons -->
+              <div class="form-footer-btn checkout-btn-con">
+                <button id="checkout-btn" type="submit" onclick="checkOut();">PROCEED TO CHECKOUT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- Scripts & Bootstrap Scripts-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="script/script.js"></script>
+  <script src="script/iconsRow.js"></script>
+</html>
