@@ -8,6 +8,13 @@ export const tableEvent = `
   <div class="flex items-center">
     <span
       class="text-sm font-semibold text-gray-800 dark:text-gray-200"
+      >#NO#</span>
+  </div>
+</td>
+<td class="px-6 py-3 whitespace-nowrap">
+  <div class="flex items-center">
+    <span
+      class="text-sm font-semibold text-gray-800 dark:text-gray-200"
       >#NAMAEVENT#</span
     >
   </div>
@@ -55,9 +62,10 @@ export function responseData(results) {
   results.forEach(isiRow);
   hide("skeletonLoader");
 }
-
+let staticNumber = 1;
 export function isiRow(value) {
   const content = tableEvent
+    .replace("#NO#", staticNumber++)
     .replace("#NAMAEVENT#", value.tujuaneven)
     .replace("#JENISEVENT#", value.jemputan)
     .replace("#HARGA#", value.harga)

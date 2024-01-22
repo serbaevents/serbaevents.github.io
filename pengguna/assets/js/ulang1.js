@@ -5,12 +5,14 @@ export const URLGetEvent = "https://asia-southeast2-proven-wavelet-401905.cloudf
 export const tableEvent = `
 <tr>
 <td class="px-6 py-3 whitespace-nowrap">
-<div class="flex items-center">
+  <div class="flex items-center">
     <span
       class="text-sm font-semibold text-gray-800 dark:text-gray-200"
-      >#NO#</span
+      >#N0#</span
     >
   </div>
+</td>
+<td class="px-6 py-3 whitespace-nowrap">
   <div class="flex items-center">
     <span
       class="text-sm font-semibold text-gray-800 dark:text-gray-200"
@@ -42,7 +44,17 @@ export const tableEvent = `
     >
   </div>
 </td>
-
+<td class="px-6 py-3 whitespace-nowrap">
+<a
+      href="updatetiket?tiketId=#IDEDIT#"
+      class="inline-flex items-center px-2 cursor-pointer text-sm text-green-600 decoration-2 hover:underline font-medium"
+    >
+      Edit
+ </a>
+  
+    <button class="btn btn-outline-danger btn-sm" onclick="deleteTiket('#IDHAPUS#')">Delete</button>
+  </td>
+</td>
 </tr>
 `;
 
@@ -51,14 +63,15 @@ export function responseData(results) {
   results.forEach(isiRow);
   hide("skeletonLoader");
 }
-let staticNumber = 1;
+
 export function isiRow(value) {
   const content = tableEvent
-    .replace("#NO#", staticNumber++)
+  .replace("#NO#", value.int+1++)
     .replace("#NAMAEVENT#", value.tujuaneven)
     .replace("#JENISEVENT#", value.jemputan)
     .replace("#HARGA#", value.harga)
-    .replace("#KETERANGAN#", value.keterangan);
-
+    .replace("#KETERANGAN#", value.keterangan)
+    .replace("#IDEDIT#", value._id)
+    .replace("#IDHAPUS#", value._id);
   addInner("tableEvent", content);
 }
