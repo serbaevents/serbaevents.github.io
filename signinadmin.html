@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SerbaEvents</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="rainbow.svg" rel="icon">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      font-family: Arial, sans-serif;
+      background-color: rgb(206, 206, 206);
+      background-size: cover;
+    }
+
+    .login-container {
+      background-color: #eb8d1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .input-group {
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      width: 300px;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 5px;
+    }
+
+    .login-button {
+      background-color: #82664b;
+      color: white;
+      padding: 10px 20px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .login-button:hover {
+      background-color: #c1c1c1;
+    }
+  </style>
+  <!-- <script src="sijs/cookie.js"></script> -->
+</head>
+
+<body>
+  <div class="login-container">
+    <h1>Welcome Admin!</h1>
+    <div class="input-group">
+      <input type="text" placeholder="Username" id="email" />
+    </div>
+    <div class="input-group">
+      <input type="password" placeholder="Password" id="password" />
+    </div>
+    <button type="submit" class="login-button" onclick="PostSignIn()">Sign In</button>
+    <br>
+    <label>
+      Tidak Punya Akun?
+      <a href="signup.html">Daftar</a>
+    </label>
+    <!-- <h4>Tidak punya akun?</h4>
+    <a href="signup.html">Daftar</a> -->
+  </div>
+
+  <script type="module" src="https://cdn.jsdelivr.net/gh/serbaevents/cdnJS@0.0.1/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+
+
+</body>
+
+</html>
