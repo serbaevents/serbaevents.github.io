@@ -1,0 +1,62 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+svg {
+    width: 100px;
+    height: 100px;
+    fill: #007BFF; /* Warna isi logo */
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#ticketDisplay {
+    margin-top: 20px;
+    border: 2px solid #007BFF;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f0faff;
+}
+
+#ticketDisplay h2 {
+    color: #007BFF;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+#ticketDisplay p {
+    margin: 8px 0;
+    color: #333;
+}

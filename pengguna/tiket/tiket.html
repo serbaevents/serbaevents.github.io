@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Tiket Konser</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
+        </svg>
+        <h1>Pemesanan Tiket Konser</h1>
+        <form id="orderForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+
+            <label for="ticketType">Tiket:</label>
+            <select id="ticketType" required>
+                <option value="VIP">VIP</option>
+                <option value="Regular">Regular</option>
+            </select>
+
+            <label for="ticketPrice">Harga Tiket:</label>
+            <input type="text" id="ticketPrice" readonly>
+
+            <label for="ticketQuantity">Jumlah Tiket:</label>
+            <input type="number" id="ticketQuantity" min="1" required>
+
+            <label for="notes">Keterangan:</label>
+            <textarea id="notes"></textarea>
+
+            <button type="button" onclick="calculatePrice()">Hitung Harga</button>
+            <button type="button" onclick="generateTicket()">Pesan Tiket</button>
+        </form>
+
+        <div id="ticketDisplay"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+</body>
+</html>
